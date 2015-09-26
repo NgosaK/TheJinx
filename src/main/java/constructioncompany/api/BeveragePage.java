@@ -23,7 +23,7 @@ public class BeveragePage {
 
     //-------------------Retrieve All Consumables--------------------------------------------------------
 
-    @RequestMapping(value = "/beverages", method= RequestMethod.GET)
+    @RequestMapping(value = "/beverage/", method= RequestMethod.GET)
     public ResponseEntity<List<Beverage>> listAllConsumables() {
         List<Beverage> consumablesList = service.getBeverages();
         if (consumablesList.isEmpty()) {
