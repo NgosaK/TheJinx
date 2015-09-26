@@ -1,26 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
-  <data-source name="MySQL - cinemaResort@localhost" uuid="a4c57822-418e-40f2-8244-7e7ec1208d05">
+  <data-source name="MySQL - jinx@localhost" uuid="1a088780-e688-421f-a582-96ad4054e5b7">
     <database-info product="MySQL" version="5.6.17" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
       <extra-name-characters>#@</extra-name-characters>
       <identifier-quote-string>`</identifier-quote-string>
     </database-info>
     <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
-    <schema name="" catalog="cinemaresort"/>
-    <table name="address" schema="" catalog="cinemaresort" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="address_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="area_code" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="city" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="country" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="number" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="province" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="street" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="sub_city" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="UK_17xrogreoflxciiraxj3jeacp" unique="true" columns="address_code"/>
-    </table>
-    <table name="beverage" schema="" catalog="cinemaresort" type="TABLE">
+    <schema name="" catalog="jinx"/>
+    <table name="beverage" schema="" catalog="jinx" type="TABLE">
       <column name="code" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="category" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -28,7 +15,7 @@
       <column name="volume" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="code"/>
     </table>
-    <table name="manager" schema="" catalog="cinemaresort" type="TABLE">
+    <table name="manager" schema="" catalog="jinx" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="department" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="job_title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -37,7 +24,7 @@
       <column name="phone_number" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="movie" schema="" catalog="cinemaresort" type="TABLE">
+    <table name="movie" schema="" catalog="jinx" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="duration" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="genre" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -46,15 +33,7 @@
       <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="pay_roll" schema="" catalog="cinemaresort" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="amount" sqlType="DOUBLE" precision="22" scale="0" nullable="false" jdbcType="8"/>
-      <column name="pay_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="receiver_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="UK_3nq9kgx8e9exvuptix4ko643" unique="true" columns="pay_code"/>
-    </table>
-    <table name="schedule" schema="" catalog="cinemaresort" type="TABLE">
+    <table name="schedule" schema="" catalog="jinx" type="TABLE">
       <column name="id" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="duration" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="end_time" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
@@ -62,50 +41,11 @@
       <column name="title" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="id"/>
     </table>
-    <table name="screening_room" schema="" catalog="cinemaresort" type="TABLE">
+    <table name="screening_room" schema="" catalog="jinx" type="TABLE">
       <column name="numberid" sqlType="BIGINT" precision="19" scale="0" nullable="false" jdbcType="-5" autoIncrement="true"/>
       <column name="size" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <column name="type" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
       <primary-key name="PRIMARY" columns="numberid"/>
-    </table>
-    <table name="site" schema="" catalog="cinemaresort" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="address_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="site_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="site_name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="site_size" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <exported-key name="FK_gw12h667vlxy9rk3khr5wl9ud" table="sub_contractor" schema="" catalog="cinemaresort" columns="subcontractor_code"/>
-      <index name="UK_1ygf79uospn1j5dt6lic9id3p" unique="true" columns="site_code"/>
-    </table>
-    <table name="staff" schema="" catalog="cinemaresort" type="TABLE">
-      <column name="dtype" sqlType="VARCHAR" precision="31" scale="0" nullable="false" jdbcType="12"/>
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="idnumber" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="hash" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4"/>
-      <column name="value" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="pay_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="phone" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="staff_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="surname" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="skill" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="institute" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="qualification" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <index name="UK_tkv6oqgei31ht6h0jsoj61008" unique="true" columns="staff_code"/>
-    </table>
-    <table name="sub_contractor" schema="" catalog="cinemaresort" type="TABLE">
-      <column name="id" sqlType="INT" precision="10" scale="0" nullable="false" jdbcType="4" autoIncrement="true"/>
-      <column name="address_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="contractor_code" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="name" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="speciality" sqlType="VARCHAR" precision="255" scale="0" nullable="true" jdbcType="12"/>
-      <column name="subcontractor_code" sqlType="INT" precision="10" scale="0" nullable="true" jdbcType="4"/>
-      <primary-key name="PRIMARY" columns="id"/>
-      <foreign-key name="FK_gw12h667vlxy9rk3khr5wl9ud" columns="subcontractor_code" ref-table="site" ref-schema="" ref-catalog="cinemaresort" ref-columns="id" update-rule="3" delete-rule="3" deferrability="2"/>
-      <index name="UK_9e8c0c3jecke2ysnqrfmcpkd1" unique="true" columns="contractor_code"/>
-      <index name="FK_gw12h667vlxy9rk3khr5wl9ud" unique="false" columns="subcontractor_code"/>
     </table>
   </data-source>
 </component>
